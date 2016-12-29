@@ -1,0 +1,30 @@
+package poomine;
+
+import java.security.SecureRandom;
+import java.util.ArrayList;
+
+
+public class Words {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String> obj = new ArrayList<String>();
+		
+		obj.add("Atmosfäär");
+		obj.add("Täieõiguslik");
+		obj.add("Rahuolematus");
+		obj.add("Kaminapuud");
+		obj.add("Kuuseriisikas");
+		
+	SecureRandom rnd = new SecureRandom();
+	
+	obj.get(0);
+	
+	return; 
+	
+	
+			
+
+	}
+
+}
