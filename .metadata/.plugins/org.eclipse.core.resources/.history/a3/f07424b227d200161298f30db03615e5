@@ -10,13 +10,23 @@ public class Base {
 		
 		System.out.println("Paku üks täht!");
 		
+
 		String word = words.getRandom();
 		String letter = TextIO.getln();
-	
 		
-		boolean correctAnswer = word.contains(letter);
+		char [] displayArray = word.toCharArray();
+	    for(int i=0; i < word.length();i++){
+	      displayArray[i] += '_';
+	    }
+		System.out.println(word);
 		
 		
+		
+		
+		
+		
+
+		boolean correctAnswer = word.contains(letter) ;
 		
 		if (correctAnswer)
 
@@ -30,9 +40,4 @@ public class Base {
 
 	}
 
-}/*char [] displayArray = word.toCharArray();
-	    for(int i=0; i < word.length();i++){
-	      displayArray[i] += '_';
-	    }
-		System.out.println(letter);*/
-	
+}
