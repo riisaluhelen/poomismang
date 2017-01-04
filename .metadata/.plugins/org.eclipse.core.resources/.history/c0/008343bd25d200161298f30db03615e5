@@ -23,8 +23,6 @@ public class Base {
 		
 		
 		
-		
-		
 
 		boolean correctAnswer = word.contains(letter) ;
 		

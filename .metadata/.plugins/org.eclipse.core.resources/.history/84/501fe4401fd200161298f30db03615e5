@@ -7,30 +7,16 @@ public class Base {
 	public static void main(String[] args) {
 
 		Words words = new Words();
-		
 		System.out.println("Paku üks täht!");
-		
 
 		String word = words.getRandom();
 		String letter = TextIO.getln();
-		
-		char [] displayArray = word.toCharArray();
-	    for(int i=0; i < word.length();i++){
-	      displayArray[i] += '_';
-	    }
-		System.out.println(word);
-		
-		
-		
-		
-		
-		
 
 		boolean correctAnswer = word.contains(letter) ;
 		
-		if (correctAnswer)
+		if (correctAnswer )
 
-			System.out.println("Tubli, see täht on sõnas olemas! ");
+			System.out.println("Tubli, see täht on sõnas olemas!");
 
 		else {
 

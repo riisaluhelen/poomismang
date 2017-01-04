@@ -17,10 +17,20 @@ public ArrayList<String> word;
 		word.add("Kuuseriisikas");
     }
 
-
 	    public String getRandom() {
-	        return word.get(new Random().nextInt(word.size()));}
+	        return word.get(new Random().nextInt(word.size()));
 		
-	    
+	}
+
+	    public class Game {
+
+	        public void main(String[] args) {
+	            Words words = new Words();
+	            System.out.println(words.getRandom());
+	        }
+	    }
 }
+
+	
+
 

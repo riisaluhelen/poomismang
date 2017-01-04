@@ -12,19 +12,9 @@ public class Base {
 		
 
 		String word = words.getRandom();
+		System.out.println(word.charAt(_));
+		
 		String letter = TextIO.getln();
-		
-		char [] displayArray = word.toCharArray();
-	    for(int i=0; i < word.length();i++){
-	      displayArray[i] += '_';
-	    }
-		System.out.println(word);
-		
-		
-		
-		
-		
-		
 
 		boolean correctAnswer = word.contains(letter) ;
 		

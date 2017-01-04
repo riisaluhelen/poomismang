@@ -18,14 +18,8 @@ public class Base {
 	    for(int i=0; i < word.length();i++){
 	      displayArray[i] += '_';
 	    }
-		System.out.println(word);
+		System.out.println(displayArray);
 		
-		
-		
-		
-		
-		
-
 		boolean correctAnswer = word.contains(letter) ;
 		
 		if (correctAnswer)
