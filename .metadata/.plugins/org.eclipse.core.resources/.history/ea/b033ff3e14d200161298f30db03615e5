@@ -14,15 +14,15 @@ public class Words {
 		word.add("Rahuolematus");
 		word.add("Kaminapuud");
 		word.add("Kuuseriisikas");
-		
-		String random = word.get(new Random().nextInt(word.size()));
-		
-		System.out.println(random);
-		
 	}
 
-	
+	static Random rnd = new Random();
+
+	static <T> T getRandomItem(Words<T> list) {
+		return list.get(word.nextInt(list.size()));
+
+		System.out.println("Random");
 
 	}
 
-
+}
