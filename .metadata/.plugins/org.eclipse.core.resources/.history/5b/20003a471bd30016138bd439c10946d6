@@ -101,17 +101,19 @@ public class Game {
 						System.out.println(word);
 						System.out.println("You won the game! Insert 'y' if you'd like to play once more.");
 						String newGame = TextIO.getln();
-						newGame.equalsIgnoreCase("y"); gameOn = true;
+						newGame.equalsIgnoreCase("y");
+						gameOn = true;
 					}
 
 				}
 			}
+			System.out.println("Game over."); // Whenever the player runs out of
+												// tries or inserts "." the game
+												// is over.
+			gameOn = false;
 
 		}
-		System.out.println("Game over."); // Whenever the player runs out of
-											// tries or inserts "." the game
-											// is over.
-		gameOn = false;
+
 	}
 	/*
 	 * System.out.println("Insert 'y' if you'd like to play once more.");

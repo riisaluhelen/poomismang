@@ -101,7 +101,8 @@ public class Game {
 						System.out.println(word);
 						System.out.println("You won the game! Insert 'y' if you'd like to play once more.");
 						String newGame = TextIO.getln();
-						newGame.equalsIgnoreCase("y"); gameOn = true;
+						newGame.equalsIgnoreCase("y");
+						gameOn = true;
 					}
 
 				}

@@ -98,28 +98,30 @@ public class Game {
 												// player has won.
 
 						gameOver = true;
-						System.out.println(word);
 						System.out.println("You won the game! Insert 'y' if you'd like to play once more.");
 						String newGame = TextIO.getln();
-						newGame.equalsIgnoreCase("y"); gameOn = true;
+						 newGame.equalsIgnoreCase("y");
+						 gameOn = true;
+						}
+						
+						
 					}
-
 				}
 			}
+			System.out.println("Game over."); // Whenever the player runs out of
+												// tries or inserts "." the game
+												// is over.
+			gameOn = false;
 
 		}
-		System.out.println("Game over."); // Whenever the player runs out of
-											// tries or inserts "." the game
-											// is over.
-		gameOn = false;
-	}
-	/*
-	 * System.out.println("Insert 'y' if you'd like to play once more.");
-	 * boolean stillPlaying = true; while (stillPlaying) { String newGame =
-	 * TextIO.getln(); stillPlaying = newGame.equalsIgnoreCase("y");
-	 * 
-	 * gameOn = true;} }
-	 */
+		/*System.out.println("Insert 'y' if you'd like to play once more.");
+		boolean stillPlaying = true;
+		while (stillPlaying) {
+			String newGame = TextIO.getln();
+			stillPlaying = newGame.equalsIgnoreCase("y");
+		
+		gameOn = true;}
+	}*/
 
 	public static void displayBlanks(char[] array) { // Puts the word into an
 														// order, separating
