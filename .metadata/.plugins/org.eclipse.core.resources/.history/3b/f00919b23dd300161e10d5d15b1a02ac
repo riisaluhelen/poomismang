@@ -48,7 +48,6 @@ public class Game {
 				System.out.println("Please enter a letter!");
 				// Player inserts the letter, making sure it's in upper case.
 				String letter = TextIO.getln().toUpperCase();
-				
 				// Reads the first letter in case the player adds two or more.
 				char inserted = letter.charAt(0);
 				// Adds one try each time the player has inserted a letter.
@@ -67,7 +66,6 @@ public class Game {
 							// .. the inserted letter will be revealed and the
 							// blank will be replaced with it.
 							guess[i] = inserted;
-							tries--;
 						}
 					}
 					// If the word is guessed, the game will be over and the
