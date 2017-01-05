@@ -6,24 +6,24 @@ public class Game {
 
 	public static void main(String[] args) {
 
-		boolean gameOn = true; // Game starts.
+		boolean gameOn = true;
 		while (gameOn) {
 
-			System.out.println("Hello, player! Welcome to a game of Hangman!"); // Introduction.
+			System.out.println("Hello, player! Welcome to a game of Hangman!");
 			System.out.println("The rules are very simple. You need to guess a word.");
 			System.out.println("You have equal amount of tries to the characters in a word.");
 			System.out.println("Good luck! And remember, don't hate the game, hate the player.");
 			System.out.println("Please insert your first guess.");
 
-			Words words = new Words(); // Brings in another class.
-			String word = words.getRandom(); // Declares what will 'word' do - get a random word from the array list in Words class.
+			Words words = new Words();
+			String word = words.getRandom();
+			
+			char[] listOfWords = word.toCharArray();
 
-			char[] listOfWords = word.toCharArray(); // Each letter from the generated random word will be treated individually.
+			int amountOfGuesses = word.length();
+			char[] timesGuessed = new char[amountOfGuesses];
 
-			int amountOfGuesses = word.length(); // Declares that the player has the same amount of guesses as the word is long.
-			char[] timesGuessed = new char[amountOfGuesses]; // Separates player's guesses from the guesses (s)he is given.
-
-			for (int i = 0; i < timesGuessed.length; i++) { // Indicates every non-guessed letter remains _.
+			for (int i = 0; i < timesGuessed.length; i++) {
 				timesGuessed[i] = '_';
 
 			}
@@ -36,9 +36,10 @@ public class Game {
 				System.out.println("Guesses left: " + (amountOfGuesses - tries));
 				System.out.println("Please enter a letter!");
 				String letter = TextIO.getln().toLowerCase();
-
+				
 				char inserted = letter.charAt(0);
-
+				
+				
 				tries++;
 				if (inserted == '.') {
 					gameOn = false;
@@ -57,10 +58,11 @@ public class Game {
 						System.out.println("You won the game!");
 					}
 				}
-			}
-			System.out.println("Game over.");
+			}		System.out.println("Game over.");
 			gameOn = false;
 		}
+		
+
 
 	}
 
