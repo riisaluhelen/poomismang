@@ -36,7 +36,6 @@ public class Game {
 				System.out.println("Guesses left: " + (amountOfGuesses - tries));
 				System.out.println("Please enter a letter!");
 				String letter = TextIO.getln().toLowerCase();
-				
 				char inserted = letter.charAt(0);
 				
 				
@@ -58,11 +57,10 @@ public class Game {
 						System.out.println("You won the game!");
 					}
 				}
-			}		System.out.println("Game over.");
-			gameOn = false;
+			}
 		}
-		
 
+		System.out.println("Game over.");
 
 	}
 

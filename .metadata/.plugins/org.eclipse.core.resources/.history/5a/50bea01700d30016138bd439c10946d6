@@ -10,11 +10,11 @@ public ArrayList<String> word;
     public Words () {
         word = new ArrayList<String>();
         
-		word.add("atmosfäär");
-		word.add("täieõiguslik");
-		word.add("rahuolematus");
-		word.add("kaminapuud");
-		word.add("kuuseriisikas");
+		word.add("Atmosfäär");
+		word.add("Täieõiguslik");
+		word.add("Rahuolematus");
+		word.add("Kaminapuud");
+		word.add("Kuuseriisikas");
 		
     }
 

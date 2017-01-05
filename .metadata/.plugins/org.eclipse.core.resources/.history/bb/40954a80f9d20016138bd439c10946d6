@@ -19,12 +19,11 @@ public class Game {
 			String word = words.getRandom();
 			
 			char[] listOfWords = word.toCharArray();
-
 			int amountOfGuesses = word.length();
 			char[] timesGuessed = new char[amountOfGuesses];
 
 			for (int i = 0; i < timesGuessed.length; i++) {
-				timesGuessed[i] = '_';
+				timesGuessed[i] = '_';i
 
 			}
 
@@ -35,11 +34,8 @@ public class Game {
 				displayBlanks(timesGuessed);
 				System.out.println("Guesses left: " + (amountOfGuesses - tries));
 				System.out.println("Please enter a letter!");
-				String letter = TextIO.getln().toLowerCase();
-				
+				String letter = (TextIO.getln().toLowerCase());
 				char inserted = letter.charAt(0);
-				
-				
 				tries++;
 				if (inserted == '.') {
 					gameOn = false;
@@ -58,11 +54,10 @@ public class Game {
 						System.out.println("You won the game!");
 					}
 				}
-			}		System.out.println("Game over.");
-			gameOn = false;
+			}
 		}
-		
 
+		System.out.println("Game over.");
 
 	}
 

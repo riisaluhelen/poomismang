@@ -58,11 +58,10 @@ public class Game {
 						System.out.println("You won the game!");
 					}
 				}
-			}		System.out.println("Game over.");
-			gameOn = false;
+			}
 		}
-		
 
+		System.out.println("Game over.");
 
 	}
 

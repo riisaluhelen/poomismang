@@ -35,10 +35,9 @@ public class Game {
 				displayBlanks(timesGuessed);
 				System.out.println("Guesses left: " + (amountOfGuesses - tries));
 				System.out.println("Please enter a letter!");
-				String letter = TextIO.getln().toLowerCase();
-				
+				String letter = TextIO.getln();
 				char inserted = letter.charAt(0);
-				
+				boolean ignoreCase = letter.equalsIgnoreCase(word);
 				
 				tries++;
 				if (inserted == '.') {
@@ -58,11 +57,10 @@ public class Game {
 						System.out.println("You won the game!");
 					}
 				}
-			}		System.out.println("Game over.");
-			gameOn = false;
+			}
 		}
-		
 
+		System.out.println("Game over.");
 
 	}
 
