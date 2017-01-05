@@ -99,18 +99,23 @@ public class Game {
 
 						gameOver = true;
 						System.out.println(word);
-						System.out.println("You won the game!");
-					
-					}
+						System.out.println("You won the game! Insert 'y' if you'd like to play once more.");
+						String newGame = TextIO.getln();
+
+						gameOn = newGame.equalsIgnoreCase("y");
+						
+
+					} else
+						gameOn = false;
 				}
 
 			}
-
-			System.out.println("Game over. Insert 'y' if you'd like to play once more.");
-			String newGame = TextIO.getln();
-
-			gameOn = newGame.equalsIgnoreCase("y"); // New game starts if the player inserts 'y'.
 		}
+		System.out.println("Game over. Insert 'y' if you'd like to play once more.");
+						String newGame = TextIO.getln();
+
+						newGame.equalsIgnoreCase("y");
+						gameOn = true;
 
 	}
 
