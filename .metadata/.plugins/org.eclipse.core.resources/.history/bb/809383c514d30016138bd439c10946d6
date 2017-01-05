@@ -22,10 +22,10 @@ public class Game {
 			char[] listOfWords = word.toCharArray(); // Each letter from the generated random word will be treated individually.
 
 			int amountOfGuesses = word.length(); // Declares that the player has the same amount of guesses as the word is long.
-			char[] guess = new char[amountOfGuesses]; // Separates player's guesses from the guesses (s)he is given.
+			char[] timesGuessed = new char[amountOfGuesses]; // Separates player's guesses from the guesses (s)he is given.
 
-			for (int i = 0; i < guess.length; i++) { // Indicates every non-guessed letter remains _.
-				guess[i] = '_';
+			for (int i = 0; i < timesGuessed.length; i++) { // Indicates every non-guessed letter remains _.
+				timesGuessed[i] = '_';
 
 			}
 
@@ -33,7 +33,7 @@ public class Game {
 			int tries = 0; // Tries player starts with.
 
 			while (!gameOver && tries != amountOfGuesses) {  // As long as game is not over and amount of guesses is not equal to tries player has left--
-				displayBlanks(guess); // Shows the player the blanks (s)he has to guess.
+				displayBlanks(timesGuessed); // Shows the player the blanks (s)he has to guess.
 				System.out.println("Guesses left: " + (amountOfGuesses - tries)); // Shows the guesses left, losing one each try.
 				System.out.println("Please enter a letter!"); 
 				String letter = TextIO.getln().toUpperCase(); // Player inserts the letter, making sure it's in upper case.
@@ -49,11 +49,11 @@ public class Game {
 				} else {
 					for (int i = 0; i < listOfWords.length; i++) {
 						if (listOfWords[i] == inserted) { // If the inserted word matches with the randomly generated word's array..
-							guess[i] = inserted; // .. the inserted letter will be revealed and the blank will be replaced with it.
+							timesGuessed[i] = inserted; // .. the inserted letter will be revealed and the blank will be replaced with it.
 						}
 					}
 
-					if (correctWord(guess)) { // If the word is guessed, the game will be over and the player has won.
+					if (correctWord(timesGuessed)) { // If the word is guessed, the game will be over and the player has won.
 
 						gameOver = true;
 						System.out.println("You won the game!");
