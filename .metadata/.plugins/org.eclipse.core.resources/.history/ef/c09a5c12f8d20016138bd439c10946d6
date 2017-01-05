@@ -18,8 +18,8 @@ public class Game {
 			Words words = new Words();
 			String word = words.getRandom();
 			
-			char[] listOfWords = (word.toCharArray());
-			word.equalsIgnoreCase(word);
+			char[] listOfWords = word.toCharArray();
+
 			int amountOfGuesses = word.length();
 			char[] timesGuessed = new char[amountOfGuesses];
 

@@ -17,9 +17,9 @@ public class Game {
 
 			Words words = new Words();
 			String word = words.getRandom();
-			
-			char[] listOfWords = (word.toCharArray());
-			word.equalsIgnoreCase(word);
+			String letter = TextIO.getln();
+			char[] listOfWords = word.toCharArray();
+
 			int amountOfGuesses = word.length();
 			char[] timesGuessed = new char[amountOfGuesses];
 
@@ -35,7 +35,6 @@ public class Game {
 				displayBlanks(timesGuessed);
 				System.out.println("Guesses left: " + (amountOfGuesses - tries));
 				System.out.println("Please enter a letter!");
-				String letter = TextIO.getln();
 				char inserted = letter.charAt(0);
 				tries++;
 				if (inserted == '.') {
